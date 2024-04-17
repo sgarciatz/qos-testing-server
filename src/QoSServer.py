@@ -49,4 +49,5 @@ def with_payload_post():
 
     req_data = ast.literal_eval(request.data.decode("UTF-8"))
     res = QoSResponseWithPayload(req_data["request_payload_size"])
+    res.send()
     return res.__dict__
